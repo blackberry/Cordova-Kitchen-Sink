@@ -1,0 +1,22 @@
+<ion-view ng-controller="ShareMediaCtrl as share" view-title="{{ share.title }}">
+    <ion-content>
+        <div class="item item-divider">
+            Required Plugins
+        </div>
+        <div class="padding">
+            <p class="required-plugin" ng-repeat="plugin in share.plugins">
+                {{ plugin }}
+            </p>
+        </div>
+        <div class="item item-divider">
+            Actions
+        </div>
+        <ion-list>
+            <ion-item ng-repeat="target in share.targets | orderBy: 'name'" class="item-icon-right" ng-click="share.invokeFilePicker('{{ target }}')">
+                <h2>{{ target.text }}<h2>
+                <p>{{ target.description }}</p>
+                <i class="icon ion-ios-arrow-right"></i>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>
