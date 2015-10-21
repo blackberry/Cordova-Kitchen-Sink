@@ -16,9 +16,17 @@ Check-back often. The sample will be updated frequently with new additions, and 
 
 * [Chad Tetreault](http://www.twitter.com/chadtatro)
 
+**Tested On**
+* BlackBerry Passport
+* BlackBerry Z30
+
 **Features**
 
 * Integrating with Native Apps
+* In App Browser
+* Share Media
+* Notification
+* Pull To Refresh
 * ...more to follow
 
 **Build System**
@@ -36,7 +44,7 @@ The following plugins are required in order for this app to work on device. You 
   ``cordova-plugin-bb-invoke``
   ``cordova-plugin-bb-card``
 
-## How to modify
+## How to modify the code
 
 Since Gulp is being used to build the project, modifying it is slightly different than the typical approach. Take a look at the following directory tree. All of your code will basically reside in the ./src folder. 
 
