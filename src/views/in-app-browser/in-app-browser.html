@@ -1,0 +1,14 @@
+<ion-view ng-controller="InAppBrowserCtrl as iab" view-title="{{ iab.title }}">
+    <ion-content>
+        <div class="item item-divider">
+            Actions
+        </div>
+        <ion-list>
+            <ion-item ng-repeat="target in iab.targets | orderBy: 'name'" class="item-icon-right" ng-click="iab.invoke()">
+                <h2>{{ target.text }}<h2>
+                <p>{{ target.description }}</p>
+                <i class="icon ion-ios-arrow-right"></i>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>

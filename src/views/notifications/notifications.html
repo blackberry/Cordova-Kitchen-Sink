@@ -1,0 +1,22 @@
+<ion-view ng-controller="NotificationsCtrl as notify" view-title="{{ notify.title }}">
+    <ion-content>
+        <div class="item item-divider">
+            Required Plugins
+        </div>
+        <div class="padding">
+            <p class="required-plugin" ng-repeat="plugin in notify.plugins">
+                {{ plugin }}
+            </p>
+        </div>
+        <div class="item item-divider">
+            Actions
+        </div>
+        <ion-list>
+            <ion-item ng-repeat="target in notify.targets | orderBy: 'name'" class="item-icon-right" ng-click="notify.sendNotification('{{target.type}}')">
+                <h2>{{ target.text }}<h2>
+                <p>{{ target.description }}</p>
+                <i class="icon ion-ios-arrow-right"></i>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>
