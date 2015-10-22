@@ -54,16 +54,18 @@ Since Gulp is being used to build the project, modifying it is slightly differen
 
 ## Getting Started
 
-1. Create a new Ionic app
+* Create a new Ionic app. [(You'll need to have Ionic installed first)](http://www.ionicframework.com)
 
 `` ionic start myApp blank ``
 
-2. Copy the contents of this repository into the root folder of the newly created project
-3. Install dependencies
+* Copy the contents of this repository into the root folder of the newly created project
+* Install dependencies
 
 `` npm install ``
 
-4. Build
+* Build 
+
+`` gulp ``
 
 ## How to customize and build
 
