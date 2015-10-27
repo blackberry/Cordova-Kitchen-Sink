@@ -11,7 +11,6 @@
  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either
  express or implied. See the License for the specific language
  governing permissions and limitations under the License. -->
-
 <ion-view ng-controller="CameraCtrl as camera" view-title="{{ camera.title }}">
     <ion-content>
         <div class="list">
@@ -24,8 +23,20 @@
             <div class="item item-divider">
                 Actions
             </div>
-            <ion-item ng-repeat="target in camera.targets | orderBy: 'name'" class="item-icon-right" ng-click="camera.invoke({{ target.request }})">
+            <!-- blackberry -->
+            <ion-item ng-repeat="target in camera.targets | orderBy: 'name'" class="item-icon-right" ng-click="camera.invokeBlackBerry({{ target.request }})">
                 <h2>{{ target.text }}<h2>
+                <p>{{ target.description }}</p>
+                <i class="icon ion-ios-arrow-right"></i>
+            </ion-item>
+        </div>
+        <div class="list">
+            <!-- cordova -->
+            <div class="item item-divider">
+                Cordova API
+            </div>
+            <ion-item class="item-icon-right" ng-click="camera.invokeCordova()">
+                <h2>Open Camera<h2>
                 <p>{{ target.description }}</p>
                 <i class="icon ion-ios-arrow-right"></i>
             </ion-item>
