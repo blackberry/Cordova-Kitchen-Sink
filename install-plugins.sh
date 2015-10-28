@@ -1,4 +1,5 @@
-echo "Installing Cordova Plugins ..."
+echo ">>> Installing Plugins ..."
 cordova plugin add cordova-plugin-bb-card
 cordova plugin add cordova-plugin-bb-invoke
-cordova plugin add cordova-plugin-notification
+cordova plugin add cordova-plugin-bb-notification
+cordova plugin install cordova-plugin-camera

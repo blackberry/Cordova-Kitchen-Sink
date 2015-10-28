@@ -20,6 +20,10 @@ angular.module('tsteas')
       this.title = 'Camera';
       this.selectedCameraMode = 'full';
 
+      this.cordovaPlugins = [
+        'cordova-plugin-camera'
+      ];
+
       this.cameraModes = [{
         text: 'Full',
         value: 'full'
