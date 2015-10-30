@@ -44,8 +44,8 @@ The following plugins are required in order for this app to work on device. You 
 
 ``cordova-plugin-bb-invoke``
 ``cordova-plugin-bb-card``
-``cordova-plugin-camera``
-``cordova-plugin-splashscreen``
+cordova-plugin-camera
+cordova-plugin-splashscreen
 
 ## How to modify the code
 
