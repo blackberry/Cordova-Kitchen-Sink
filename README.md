@@ -43,11 +43,8 @@ This sample uses Gulp for a build system. This allows you, the developer, to hav
 The following plugins are required in order for this app to work on device. You can manually install these, or run the bash script *install-plugins.sh*.
 
 ``cordova-plugin-bb-invoke``
-
 ``cordova-plugin-bb-card``
-
 ``cordova-plugin-camera``
-
 ``cordova-plugin-splashscreen``
 
 ## How to modify the code
