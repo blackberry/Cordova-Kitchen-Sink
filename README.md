@@ -17,6 +17,7 @@ Check-back often. The sample will be updated frequently with new additions, and 
 * [Chad Tetreault](http://www.twitter.com/chadtatro)
 
 **Tested On**
+
 * BlackBerry Passport
 * BlackBerry Z30
 
@@ -41,12 +42,14 @@ This sample uses Gulp for a build system. This allows you, the developer, to hav
 
 The following plugins are required in order for this app to work on device. You can manually install these, or run the bash script *install-plugins.sh*.
 
-  ``cordova-plugin-bb-invoke``
-  ``cordova-plugin-bb-card``
+`` cordova-plugin-bb-invoke ``
+`` cordova-plugin-bb-card ``
+`` cordova-plugin-camera ``
+`` cordova-plugin-splashscreen ``
 
 ## How to modify the code
 
-Since Gulp is being used to build the project, modifying it is slightly different than the typical approach. Take a look at the following directory tree. All of your code will basically reside in the ./src folder. 
+Since Gulp is used to run a few tasks before building the project, modifying it is slightly different than the typical approach. Take a look at the following directory tree. All of your code will basically reside in the ./src folder. 
 
 * src/ - all of your code resides here
 * src/static - any assets or 'static' files you want copied to www/ upon build

@@ -1,34 +1,50 @@
 <!-- Copyright 2015 BlackBerry Ltd.
-
- Licensed under the Apache License, Version 2.0 (the "License");
- you may not use this file except in compliance with the License.
-
- You may obtain a copy of the License at
- http://www.apache.org/licenses/LICENSE-2.0
-
- Unless required by applicable law or agreed to in writing, software
- distributed under the License is distributed on an "AS IS" BASIS,
- WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either
- express or implied. See the License for the specific language
- governing permissions and limitations under the License. -->
-
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+http://www.apache.org/licenses/LICENSE-2.0
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either
+express or implied. See the License for the specific language
+governing permissions and limitations under the License. -->
 <ion-view ng-controller="CameraCtrl as camera" view-title="{{ camera.title }}">
-    <ion-content>
-        <div class="list">
-            <div class="item item-divider">
-                Camera Modes
-            </div>
-            <ion-radio ng-repeat="mode in camera.cameraModes" ng-value="mode.value" ng-model="camera.selectedCameraMode">
-                {{ mode.text }}
-            </ion-radio>
-            <div class="item item-divider">
-                Actions
-            </div>
-            <ion-item ng-repeat="target in camera.targets | orderBy: 'name'" class="item-icon-right" ng-click="camera.invoke({{ target.request }})">
-                <h2>{{ target.text }}<h2>
-                <p>{{ target.description }}</p>
-                <i class="icon ion-ios-arrow-right"></i>
-            </ion-item>
-        </div>
-    </ion-content>
+<ion-content>
+<div class="list">
+  <div class="item item-divider">
+    Camera Modes
+  </div>
+  <ion-radio ng-repeat="mode in camera.cameraModes" ng-value="mode.value" ng-model="camera.selectedCameraMode">
+  {{ mode.text }}
+  </ion-radio>
+  <div class="item item-divider">
+    Actions
+  </div>
+  <!-- blackberry -->Ó
+  <ion-item ng-repeat="target in camera.targets | orderBy: 'name'" class="item-icon-right" ng-click="camera.invokeBlackBerry({{ target.request }})">
+  <h2>{{ target.text }}<h2>
+  <p>{{ target.description }}</p>
+  <i class="icon ion-ios-arrow-right"></i>
+  </ion-item>
+</div>
+<!-- cordova -->
+<div class="list">
+  <div class="item item-divider">
+    Required Cordova Plugins
+  </div>
+  <div class="padding">
+    <p class="required-plugin" ng-repeat="plugin in camera.cordovaPlugins">
+      {{ plugin }}
+    </p>
+  </div>
+  <div class="item item-divider">
+    Cordova API
+  </div>
+  <ion-item class="item-icon-right" ng-click="camera.invokeCordova()">
+  <h2>Open Camera<h2>
+  <p>{{ target.description }}</p>
+  <i class="icon ion-ios-arrow-right"></i>
+  </ion-item>
+</div>
+</ion-content>
 </ion-view>

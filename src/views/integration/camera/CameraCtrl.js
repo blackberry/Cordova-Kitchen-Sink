@@ -20,6 +20,10 @@ angular.module('tsteas')
       this.title = 'Camera';
       this.selectedCameraMode = 'full';
 
+      this.cordovaPlugins = [
+        'cordova-plugin-camera'
+      ];
+
       this.cameraModes = [{
         text: 'Full',
         value: 'full'
@@ -43,8 +47,8 @@ angular.module('tsteas')
         }
       }];
 
-
-      this.invoke = function(request) {
+      // blackberry camera
+      this.invokeBlackBerry = function(request) {
         // use current selected mode
         request.data = _this.selectedCameraMode;
 
@@ -57,12 +61,12 @@ angular.module('tsteas')
 
             // success
             function(path) {
-              console.log('path: file://' + path);
+              alert('path: file://' + path);
             },
 
             // closed
             function(reason) {
-              console.log('error: ' + reason);
+              alert('error: ' + reason);
             },
 
             // fail
@@ -84,6 +88,19 @@ angular.module('tsteas')
             function(e) {}
           );
         }
+      };
+
+
+      // cordova camera
+      this.invokeCordova = function() {
+        navigator.camera.getPicture(
+          function onSuccess(path) {
+            alert(path);
+          },
+          function onFail(message) {
+            alert('Failed because: ' + message);
+          }
+        );
       };
 
     }
