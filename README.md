@@ -14,7 +14,7 @@ Check-back often. The sample will be updated frequently with new additions, and 
 
 **Author(s)** 
 
-* [Chad Tetreault](http://www.twitter.com/chadtatro)
+* [Chad Tetreault](http://bit.ly/chadli123)
 
 **Tested On**
 
